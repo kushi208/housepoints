@@ -7,8 +7,8 @@ app.secret_key = os.getenv('SECRET_KEY', 'default_secret_key')
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
 db = SQLAlchemy(app)
 
-TEACHER_PASSWORD = os.getenv('TEACHER_PASSWORD', 'svteacher123')
-ADMIN_PASSWORD = os.getenv('ADMIN_PASSWORD', 'svadmin123')
+TEACHER_PASSWORD = os.getenv('TEACHER_PASSWORD', 'teacher123')
+ADMIN_PASSWORD = os.getenv('ADMIN_PASSWORD', 'admin123')
 
 class HousePoints(db.Model):
     id = db.Column(db.Integer, primary_key=True)
