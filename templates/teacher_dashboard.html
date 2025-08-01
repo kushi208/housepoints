@@ -1,0 +1,11 @@
+<h2>Enter House Points</h2>
+<form method="POST">
+  <select name="house">
+    {% for h in houses %}
+      <option value="{{ h.house }}">{{ h.house }}</option>
+    {% endfor %}
+  </select>
+  <input type="number" name="points" placeholder="Points (+/-)" required>
+  <button type="submit">Add Points</button>
+</form>
+<a href="{{ url_for('logout') }}">Logout</a>

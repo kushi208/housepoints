@@ -1,0 +1,8 @@
+<h2>Leaderboard</h2>
+<table>
+  <tr><th>House</th><th>Points</th></tr>
+  {% for h in houses %}
+    <tr><td>{{ h.house }}</td><td>{{ h.points }}</td></tr>
+  {% endfor %}
+</table>
+<a href="{{ url_for('logout') }}">Logout</a>
